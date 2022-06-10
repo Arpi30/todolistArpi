@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d2c68e44d8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container d-flex flex-column justify-content-start p-0">
+        <!--Header-->
+        <div class="welcomeText  m-4">
+            <h3 class="first d-flex justify-content-end" >enjoy my to<span>do</span> list app</h3>
+            <h3 class="second d-flex justify-content-center">where <span> things </span> work out</h3>
+            <h3 class="third d-flex justify-content-start"><span>every day</span> of your life</h3>
+        </div>
+        <!--main-->
+        <main class="d-flex flex-column align-items-center justify-content-evenly">
+            <form action="submit" class="form d-flex flex-column justify-content-evenly" onsubmit="localStorageObjectSubmitEvent()">
+                <input type="text" id="Name" name="name" placeholder="Add your new todo..." class="mt-2">
+                <textarea type="text" id="Description" name="desc" placeholder="Add short description..."
+                    class="mt-2"></textarea>
+                <input type="date" id="date" name="date" placeholder="Date" class="mt-2">
+                <button class="send mt-2">Send</button>
+            </form>
+            <!--insert card dinamicaly-->
+            <div id="cardGroup">
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
